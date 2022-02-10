@@ -17,7 +17,8 @@ user_access() {
 user_check
 pacman -S virt-manager libvirt qemu edk2-ovmf ebtables dnsmasq
 systemctl enable libvirtd
+systemctl start libvirtd
 virsh net-autostart default
 user_access
 clear
-echo "Please reboot your system"
+echo "Installation complete"
